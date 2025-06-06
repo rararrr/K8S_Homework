@@ -1,2 +1,4 @@
 # K8S_Homework
-For homework
+For homework /
+minikube start --driver=podman /
+minikube status 
