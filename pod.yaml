@@ -21,11 +21,12 @@ spec:
       image: nginx:alpine
       ports:
         - containerPort: 80
-
       volumeMounts:
         - name: shared-volume
-          mountPath: /homework
+          mountPath: /usr/share/nginx/html
+      command: ["nginx"]
+      args: ["-g", "daemon off;"]
       lifecycle:
         preStop:
           exec:
-            command: ["/bin/sh", "-c", "rm -f /homework/index.html"]
+            command: ["rm", "-f", "/usr/share/nginx/html/index.html"]
