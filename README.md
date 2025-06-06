@@ -1,2 +1,7 @@
 # K8S_Homework
-For homework
+
+```console
+minikube start --driver=podman
+minikube status 
+```
+
