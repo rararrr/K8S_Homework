@@ -3,9 +3,6 @@ kind: Ingress
 metadata:
   name: homework-ingress
   namespace: homework
-  annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /homepage
-    nginx.ingress.kubernetes.io/use-regex: "true"
 spec:
   ingressClassName: nginx
   rules:
@@ -13,7 +10,7 @@ spec:
     http:
       paths:
       - path: /index.html
-        pathType: ImplementationSpecific
+        pathType: Exact
         backend:
           service:
             name: homework-service
