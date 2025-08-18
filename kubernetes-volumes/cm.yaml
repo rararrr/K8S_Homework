@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: homework-config
+  namespace: homework
+data:
+  header: "Homework"
+  description: "Null."
